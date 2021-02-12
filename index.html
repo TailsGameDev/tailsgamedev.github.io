@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro" rel="stylesheet">
+	<title>Cainã CC</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+	// 2. This code loads the IFrame Player API code asynchronously.
+	var tag = document.createElement('script');
+
+	tag.src = "https://www.youtube.com/iframe_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	// 3. This function creates an <iframe> (and YouTube player)
+	//    after the API code downloads.
+	var player;
+	function onYouTubeIframeAPIReady() {
+		player = new YT.Player('player', {
+			height: '360',
+			width: '640',
+			videoId: 'M7lc1UVf-VE',
+			events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+			}
+		});
+	}
+
+	// 4. The API will call this function when the video player is ready.
+	function onPlayerReady(event) {
+		event.target.playVideo();
+	}
+
+	// 5. The API calls this function when the player's state changes.
+	//    The function indicates that when playing a video (state=1),
+	//    the player should play for six seconds and then stop.
+	var done = false;
+	function onPlayerStateChange(event) {
+		if (event.data == YT.PlayerState.PLAYING && !done) {
+			//setTimeout(stopVideo, 6000);
+			//done = true;
+		}
+	}
+	function stopVideo() {
+		player.stopVideo();
+	}
+</script>
+</head>
+<body>
+
+<div id="page">
+	<br>
+	<div id="cabeçalho"><div id=inner-cabeçalho><h1>Cainã C. Caldas</h1></div></div>
+	<br>
+<!--
+	<div id="navigation">
+		<ul>
+			<li><a href="portfolio.html">Portfólio</a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="curriculo.html">Currículo</a></li>
+		</ul>
+	</div>
+-->
+	<div id="content">
+
+		<div id="quem-somos">
+			<h2>Portfólio Caina Game Developer</h2>
+		</div>
+
+        <div class="post">
+			<div class="post-title">
+				<h3>Crystal Chasers League</h3>
+			</div>
+			<div class="post-content">
+				<p>Desde fevereiro de 2020 estou vivendo o sonho de estagiar na 
+                    <a href="https://flipstar.com.br/index.php/pt/home-flipstar-games/">Flipstar Game Studio</a> como programador do jogo
+                    CCL que está sendo desenvolvido em Unity, atualmente em early access na Steam. A equipe teve apenas dois programadores
+                    durante a maioria do tempo em que estou ali, então tenho a alegria de atuar nas mais diversas áreas do código.
+                    Tive contribuições importantes na movimentação dos carros voadores, no drift, no ataque melee, na implementação dos modos
+                    "Crystal Captors" e "Triathlon Race" para o online, no sistema de interpolação para suavização do lag, otimização
+                    e melhorias no pathfinding, inúmeras bug fixes, etc.
+                </p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GogzLOe7VQk" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					<br>
+					<a href ="https://www.youtube.com/watch?v=GogzLOe7VQk">Clique aqui para assistir ao gameplay completo no youtube.</a>
+					<p><a href="https://store.steampowered.com/app/1375650/Crystal_Chasers_League/">Acesse página do jogo na Steam!</a></p>
+			</div>
+		</div>
+
+        <div class="post">
+			<div class="post-title">
+				<h3>Cards On Adventure</h3>
+			</div>
+			<div class="post-content">
+				<p>Jogo começou na UFSC Game Jam 3, em março de 2020, mas investi mais alguns meses da pandemia nele depois.</p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/31lxEXs4cGU" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					<br>
+					<a href ="https://www.youtube.com/watch?v=31lxEXs4cGU&feature=youtu.be">Clique aqui para assistir ao gameplay completo no youtube.</a>
+					<p><a href="https://ccaldas.itch.io/cards-on-adventure">Acesse o jogo na itch.io!</a></p>
+			</div>
+		</div>
+
+		<div class="post">
+			<div class="post-title">
+				<h3>In Your Heart</h3>
+			</div>
+			<div class="post-content">
+				<p>Jogo desenvolvido em Unity com meu nobre amigo Mikhael Oliveira e o honorável Felipe Azeredo</p>
+
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/JDN3By9MvyY"
+					frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					 allowfullscreen></iframe>
+
+					<br>
+					<a href ="https://www.youtube.com/watch?v=JDN3By9MvyY">Clique aqui para assistir ao gameplay completo no youtube.</a>
+					<p><a href="https://gamejolt.com/games/inyourheart/357483">Acesse o jogo na Game Jolt!</a></p>
+			</div>
+		</div>
+
+
+        <div class="post">
+			<div class="post-title">
+				<h3>Escavestimento</h3>
+			</div>
+			<div class="post-content">
+				<p>Pude participar com a galera do SC Games e o Cassiano Canheti do desenvolvimento desse jogo para um edital.
+                    É um jogo educativo sobre finanças pessoais, com a temática de arqueologia. Perdão pelo chiado na gravação!
+                </p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQgGlG_yA2E" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					<br>
+					<a href ="https://www.youtube.com/watch?v=dQgGlG_yA2E&feature=youtu.be">Clique aqui para assistir ao gameplay completo no youtube.</a>
+					<p><a href="https://gamejolt.com/games/escavestimento/432573">Acesse o jogo na Game Jolt!</a></p>
+			</div>
+		</div>
+
+        <div class="post">
+			<div class="post-title">
+				<h3>Templo dos Ecos</h3>
+			</div>
+			<div class="post-content">
+				<p>Jogo desenvolvido em Unity para a Global Game Jam 2021. Tentamos fazer um jogo que fosse acessível para cegos, então
+                    fica o desafio de concluir com os olhos fechados!
+                </p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/HgSUYUV4dR4" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					<br>
+					<a href ="https://www.youtube.com/watch?v=HgSUYUV4dR4">Clique aqui para assistir ao gameplay completo no youtube.</a>
+					<p><a href="https://gamejolt.com/games/templo-dos-ecos/582099">Acesse o jogo na Game Jolt!</a></p>
+			</div>
+		</div>
+
+        <div class="post">
+			<div class="post-title">
+				<h3>No Brain No Pain</h3>
+			</div>
+			<div class="post-content">
+				<p>Como não mencionar pelo menos um dos jogos que desenvolvi com os meus alunos durante meu estágio no SC Games?
+                    Fui professor lá por cerca de um ano e meio, ensinando Unity e Construct 2. Cada turma produzia pelo menos
+                    um jogo como projeto de conclusão do curso, e eu participava super ativamente. Esse é um dos que me faz sorrir quando me lembro.
+                </p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-AcdtBOQyt8" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					<br>
+					<a href ="https://youtu.be/-AcdtBOQyt8">Clique aqui para assistir ao gameplay completo no youtube.</a>
+					<p><a href="https://gamejolt.com/games/nobrainnopain/453615">Acesse o jogo na Game Jolt!</a></p>
+			</div>
+		</div>
+
+		<div class="post">
+			<div class="post-title">
+				<h3>Billy</h3>
+			</div>
+			<div class="post-content">
+				<p>Jogo desenvolvido em Unity com meus amigos do estágio no SC Games durante a Global Game Jam 2019 em Curitiba. Agradecimentos à Marcia Battistella pelo apoio.</p>
+
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/xJbSo0AV6e4"
+					 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					  allowfullscreen></iframe>
+
+					<br>
+					<a href ="https://gaming.youtube.com/watch?v=xJbSo0AV6e4&feature=share">Clique aqui para assistir ao gameplay completo no youtube.</a>
+					<p><a href="https://gamejolt.com/games/billy/394903">Acesse o jogo na Game Jolt!</a></p>
+			</div>
+		</div>
+
+        <!--
+		<div class="post">
+			<div class="post-title">
+				<h3>Dynowar</h3>
+			</div>
+			<div class="post-content">
+				<p>
+				Esse jogo foi o vencedor da Game Jam Senai 2018!
+				Em Dynowar, as sereias e as bruxas estão em uma competição de caçada a dinossauros.
+				Jogue em duas pessoas, com um smartphone.
+				Em um minuto, tente abater mais dinossauros do que o seu oponente, enquanto eles aparecem.
+				</p>
+					<img src="img/dynowar.png" alt="Dynowar picture" height="400">
+					<p><a href="https://gamejolt.com/games/dinowar/394913">Acesse o jogo na Game Jolt!</a></p>
+			</div>
+		</div>
+        -->
+
+		<div class="post">
+			<div class="post-title">
+				<h3>Pew Burger</h3>
+			</div>
+			<div class="post-content">
+				<p>
+				Pew Burger foi desenvolvido em equipe com Lucas Schlindwein e Fabricio Roepcke para a primeira Game Jam UFSC
+				É um jogo para duas pessoas, em um teclado.
+				Os controles são os direcionais (WASD e as setinhas).
+				Atire hamburgeres fazendo gols no seu oponente. Também é uma boa acertar as batatas para que elas façam gols.
+				Cuidado para não deixar o seu oponente comer os itens!
+				</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/ihb4Q1xx0ig" frameborder="0"
+				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<p><a href="https://gamejolt.com/games/pewburger/395000">Acesse o jogo na Game Jolt!</a></p>
+			</div>
+		</div>
+
+		<div class="post">
+				<div class="post-title">
+				<h3>Intrigas Digital</h3>
+				</div>
+				<div class="post-content">
+					<p>É uma implementação um pouco simplificada do card game Intrigas, do grupo G2E da UFSC, usando Java e Eclipse.</p>
+					<br/>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SfRNjuAz29w" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<br/>
+					<br/>
+					<p><a href="/downloads/intrigasDigital.jar" target="_blank" download="intrigasDigital.jar">Baixar Intrigas Digital. Requer Java 10 instalado no PC.</a></p>
+				</div>
+		</div>
+
+	<div id="footer">
+		<div id="social-media">
+			<div id="fb"></div>
+		</div>
+		<div id="telefone"><p>(48) 991 733 714</p></div>
+		<dir id="e-mail"><p>cainacc@hotmail.com</p></dir>
+		<div id="fb"><a href="https://www.facebook.com/cainacorreacaldas"><img src="img/fb-icon.png" width="50px"></a></div>
+	</div>
+
+
+</div>
+</body>
+</html>

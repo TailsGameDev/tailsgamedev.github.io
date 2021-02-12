@@ -1,0 +1,104 @@
+body {
+			background-image: url("img/body-bg.jpg");
+			background-position: right top;
+		}
+
+		* {
+			color: white;
+			margin: 0;
+		}
+
+		#page {
+			/*float: left;*/
+			margin: 0 8% 2% 8%;
+			background-color: black;
+			padding-bottom: 2%;
+		}
+
+	/*	#right-art {
+			float: right;
+			height: 1000px;
+			width: 100px;
+			border: 10px solid red;
+		}
+*/
+		#cabeçalho {
+			/*border: 5px solid blue;*/
+			border-top: 5px solid blue;
+			border-bottom: 5px solid blue;
+			margin: 0 2% 0 2%;
+			padding: 1% 10%;
+
+			background-color: black;
+			
+		}
+
+		#inner-cabeçalho {
+			/*border: 5px solid white;*/
+			border-left: 5px solid blue;
+			border-right: 5px solid blue;
+			text-align: center;
+			font-size: 3em;
+		}
+
+		ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+}
+
+li {
+    float: left;
+    width: 33.33%;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+		#content {
+			/*margin: 0 30% 0 0;*/
+			font-family: Source Code Pro;
+		}
+
+		#boas-vindas {
+			text-align: center;
+			border: 5px solid rgb(114,59,217);
+			margin: 2% 20% 0 20%;
+			font-size: 2em;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		#quem-somos {
+			text-align: left;
+			margin: 2% 10% 0 10%;
+		}
+
+		#quem-somos2 {
+			text-align: right;
+		}
+
+		.post {
+			/*border: solid 5px blue;*/
+			margin: 10%;
+			text-align: justify;
+		}
+
+		#footer {
+			text-align: center;
+			font-size: 2em;
+		}
+
