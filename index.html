@@ -2,128 +2,141 @@
 <html>
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro" rel="stylesheet">
-	<title>Cainã CC</title>
+	
+	<title>Portfolio Caina</title>
+	
 	<meta charset="utf-8" />
+	
 	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Iframe script -->
 	<script>
-	// 2. This code loads the IFrame Player API code asynchronously.
-	var tag = document.createElement('script');
+		// 2. This code loads the IFrame Player API code asynchronously.
+		var tag = document.createElement('script');
 
-	tag.src = "https://www.youtube.com/iframe_api";
-	var firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-	// 3. This function creates an <iframe> (and YouTube player)
-	//    after the API code downloads.
-	var player;
-	function onYouTubeIframeAPIReady() {
-		player = new YT.Player('player', {
-			height: '360',
-			width: '640',
-			videoId: 'M7lc1UVf-VE',
-			events: {
-				'onReady': onPlayerReady,
-				'onStateChange': onPlayerStateChange
-			}
-		});
-	}
-
-	// 4. The API will call this function when the video player is ready.
-	function onPlayerReady(event) {
-		event.target.playVideo();
-	}
-
-	// 5. The API calls this function when the player's state changes.
-	//    The function indicates that when playing a video (state=1),
-	//    the player should play for six seconds and then stop.
-	var done = false;
-	function onPlayerStateChange(event) {
-		if (event.data == YT.PlayerState.PLAYING && !done) {
-			//setTimeout(stopVideo, 6000);
-			//done = true;
+		// 3. This function creates an <iframe> (and YouTube player)
+		//    after the API code downloads.
+		var player;
+		function onYouTubeIframeAPIReady() {
+			player = new YT.Player('player', {
+				height: '360',
+				width: '640',
+				videoId: 'M7lc1UVf-VE',
+				events: {
+					'onReady': onPlayerReady,
+					'onStateChange': onPlayerStateChange
+				}
+			});
 		}
-	}
-	function stopVideo() {
-		player.stopVideo();
-	}
-</script>
+
+		// 4. The API will call this function when the video player is ready.
+		function onPlayerReady(event) {
+			event.target.playVideo();
+		}
+
+		// 5. The API calls this function when the player's state changes.
+		//    The function indicates that when playing a video (state=1),
+		//    the player should play for six seconds and then stop.
+		var done = false;
+		function onPlayerStateChange(event) {
+			if (event.data == YT.PlayerState.PLAYING && !done) {
+				//setTimeout(stopVideo, 6000);
+				//done = true;
+			}
+		}
+		function stopVideo() {
+			player.stopVideo();
+		}
+	</script>
+
+	<!-- Include Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
 
 <div id="page">
-	<br>
-	<div id="cabeçalho"><div id=inner-cabeçalho><h1>Cainã C. Caldas</h1></div></div>
-	<br>
-<!--
-	<div id="navigation">
-		<ul>
-			<li><a href="portfolio.html">Portfólio</a></li>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="curriculo.html">Currículo</a></li>
-		</ul>
+
+	<div class = "row">
+		<!-- <div id="white-line"></div> -->
+		<div class = "col-lg-4">
+			<img id="caina-pic" src="img/caina.jpg">
+		</div>
+		<div class = "col-lg-8">
+			<h1 id="caina-name" >Cainã Correa Caldas</h1>
+			<div id="whitel"></div>
+			<h2>TailsGameDev</h2>
+			<p>
+				🎮 Game Programmer <br>
+				💻 Majoring in Computer Science <br>
+				🏖️ Brazil, Florianópolis <br>
+				📞 +55 48 991733714 <br>
+				📨 cainacc@hotmail.com <br>
+			</p>
+		</div>
 	</div>
--->
+
 	<div id="content">
 
-		<div id="quem-somos">
-			<h2>Portfólio Caina Game Developer</h2>
-		</div>
-
-        <div class="post">
-			<div class="post-title">
-				<h3>Crystal Chasers League</h3>  
+		<!-- CRYSTAL CHASERS LEAGUE -->
+		<div class="row section">
+			<div class="col-lg-6">
+				<h2 class="post-title">Flipstar Game Studio</h2>
+				<div id="whitel"></div>
+				<iframe id="steam-frame" src="https://store.steampowered.com/widget/1375650/" frameborder="0"></iframe>
 			</div>
-			<a href="https://store.steampowered.com/app/1375650/Crystal_Chasers_League/"><img id="icon" src="img/steam-icon.png"></a>
-			<div class="post-content">
-				<p>Desde fevereiro de 2020 estou vivendo o sonho de estagiar na 
-                    <a href="https://flipstar.com.br/index.php/pt/home-flipstar-games/">Flipstar Game Studio</a> como programador do jogo
-                    CCL que está sendo desenvolvido em Unity, atualmente em early access na Steam. A equipe teve apenas dois programadores
-                    durante a maioria do tempo em que estou ali, então tenho a alegria de atuar nas mais diversas áreas do código.
-                    Tive contribuições importantes na movimentação dos carros voadores, no drift, no ataque melee, na implementação dos modos
-                    "Crystal Captors" e "Triathlon Race" para o online, no sistema de interpolação para suavização do lag, otimização
-                    e melhorias no pathfinding, inúmeras bug fixes, etc.
-                </p>
-
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/GogzLOe7VQk" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-					<br>
-
+			<div class="col-lg-6">
+				<iframe src="https://www.youtube.com/embed/GogzLOe7VQk" frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+				id="frame-video"></iframe>
 			</div>
 		</div>
-
-        <div class="post">
-			<div class="post-title">
-				<h3>Cards On Adventure</h3>
+		
+		<!-- CARDS ON ADVENTURE -->
+		<div class="row section">
+			<div class="col-lg-6">
+				<iframe src="https://www.youtube.com/embed/31lxEXs4cGU" frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+				id="frame-video"></iframe>
 			</div>
-			<a href="https://ccaldas.itch.io/cards-on-adventure"><img id="icon" src="img/itchio-icon.png"></a>
-			<div class="post-content">
-				<p>Jogo começou na UFSC Game Jam 3, em março de 2020, mas investi mais alguns meses da pandemia nele depois.</p>
-
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/31lxEXs4cGU" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-					<br>
+			<div class="col-lg-6">
+				<h2 class="post-title">UFSC Game Jam 3</h2>
+				<div id="whitel"></div>
+				<iframe frameborder="0" id="steam-frame" src="https://itch.io/embed/593926?border_width=5&amp;bg_color=222222&amp;fg_color=eeeeee&amp;link_color=ffffff&amp;border_color=ffffff" width="560" height="175">
+					<a href="https://tailsgamedev.itch.io/cards-on-adventure">Cards On Adventure by TailsGameDev</a></iframe>
 			</div>
 		</div>
 
-		<div class="post">
-			<div class="post-title">
-				<h3>In Your Heart</h3>
+		<!-- IN YOUR HEARTH -->
+		<div class="row section">
+			<div class="col-lg-6">
+				<h2 class="post-title">Game Jaaj</h2>
+				<div id="whitel"></div>
+				<iframe src="https://widgets.gamejolt.com/package/v1?key=QL8JnFNo" frameborder="0" width="500" height="245"></iframe>
 			</div>
-			<a href="https://gamejolt.com/games/inyourheart/357483"><img id="icon" src="img/gamejolt-icon.png"></a>
-			<div class="post-content">
-				<p>Jogo desenvolvido em Unity com meu nobre amigo Mikhael Oliveira e o honorável Felipe Azeredo</p>
-
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/JDN3By9MvyY"
-					frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					 allowfullscreen></iframe>
-
-					<br>
-					<a href ="https://www.youtube.com/watch?v=JDN3By9MvyY">Clique aqui para assistir ao gameplay completo no youtube.</a>
+			<div class="col-lg-6">
+				<iframe src="https://www.youtube.com/embed/JDN3By9MvyY" frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+				id="frame-video"></iframe>
 			</div>
 		</div>
 
+		<!-- ESCAVESTIMENTO -->
+		<div class="row section">
+			<div class="col-lg-6">
+				<iframe src="https://www.youtube.com/embed/dQgGlG_yA2E" frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+				id="frame-video"></iframe>
+			</div>
+			<div class="col-lg-6">
+				<h2 class="post-title">Edital ACIF</h2>
+				<div id="whitel"></div>
+				<iframe src="https://widgets.gamejolt.com/package/v1?key=QL8JnFNo" frameborder="0" width="500" height="245"></iframe>
+			</div>
+		</div>
 
         <div class="post">
 			<div class="post-title">
