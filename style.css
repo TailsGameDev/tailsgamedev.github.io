@@ -36,6 +36,17 @@ body {
 	position: absolute;
 }
 
+#social-media {
+	margin-top: -14px;
+	display: inline;
+	height: 30px;
+	width: 30px;
+}
+
+#tails-game-dev {
+	display: inline;
+}
+
 .post-title {
 	font-size: 8m;
 	margin-left: 30px;
