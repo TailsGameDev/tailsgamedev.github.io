@@ -4,19 +4,19 @@ body {
 }
 
 * {
-	color: white;
+	color: #DE4902;
 	margin: 0;
 }
 
 #page {
 	margin: 0 8% 2% 8%;
-	background-color: black;
+	background-color: #202020;
 	padding-bottom: 2%;
 }
 
 #caina-pic {
-	background-color: white;
-	border: solid 5px white;
+	background-color: #202020;
+	border: solid 5px #DE8702;
 	width: 300px;
 	height: 300px;
 	text-align: right;
@@ -28,7 +28,7 @@ body {
 }
 
 #white-line {
-	border-top: 5px solid white;
+	border-top: 5px solid #DE8702;
 	width: 100%;
 	margin-top: 65px;
 	position: absolute;
@@ -51,7 +51,7 @@ body {
 }
 
 #whitel {
-	border-top: 5px solid white;
+	border-top: 5px solid #DE8702;
 	width: 115%;
 	margin-left: -30px;
 }
@@ -67,8 +67,8 @@ body {
 }
 
 #frame-video {
-	border: 5px solid white;
-	background-color: white;
+	border: 5px solid #DE8702;
+	background-color: #DE8702;
 	height: 350px;
 	width: 100%;
 }
