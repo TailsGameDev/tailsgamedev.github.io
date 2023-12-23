@@ -10,6 +10,50 @@
 	
 	<link rel="stylesheet" type="text/css" href="style.css">
 
+	<!-- Iframe script -->
+	<script>
+		// 2. This code loads the IFrame Player API code asynchronously.
+		var tag = document.createElement('script');
+
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		// 3. This function creates an <iframe> (and YouTube player)
+		//    after the API code downloads.
+		var player;
+		function onYouTubeIframeAPIReady() {
+			player = new YT.Player('player', {
+				height: '360',
+				width: '640',
+				videoId: 'M7lc1UVf-VE',
+				events: {
+					'onReady': onPlayerReady,
+					'onStateChange': onPlayerStateChange
+				}
+			});
+		}
+
+		// 4. The API will call this function when the video player is ready.
+		function onPlayerReady(event) {
+			event.target.playVideo();
+		}
+
+		// 5. The API calls this function when the player's state changes.
+		//    The function indicates that when playing a video (state=1),
+		//    the player should play for six seconds and then stop.
+		var done = false;
+		function onPlayerStateChange(event) {
+			if (event.data == YT.PlayerState.PLAYING && !done) {
+				//setTimeout(stopVideo, 6000);
+				//done = true;
+			}
+		}
+		function stopVideo() {
+			player.stopVideo();
+		}
+	</script>
+
 	<!-- Include Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
@@ -17,17 +61,32 @@
 
 <div id="page">
 
-	<!-- HEADER -->
-	<header class="fixed-header">
-		<div class="logo">
-		  <img src="your-logo.png" alt="Company Logo">
+	<div class = "row">
+		<!-- <div id="white-line"></div> -->
+		<!--<div class = "col-lg-4">
+			<img id="caina-pic" src="img/caina.png">
+		</div>-->
+		<div class = "col-lg-12">
+			<h1 id="caina-name" >Cainã Correa Caldas</h1>
+			<div id="whitel"></div>
+			<a id="social-media" href="https://tailsgamedev.itch.io/">
+				<img id="social-media" src="img/itchio.png"/>
+			</a>
+			<a id="social-media" href="https://www.instagram.com/cainacaldas/">
+				<img id="social-media" src="img/instagram.png"/>
+			</a>
+			<a id="social-media" href="https://www.linkedin.com/in/cain%C3%A3-correa-caldas-453962a5/">
+				<img id="social-media" src="https://img.icons8.com/fluency/48/000000/linkedin.png"/>
+			</a>
+			<h2 id="tails-game-dev">TailsGameDev</h2>
+			<p>
+				🎮 Game Programmer <br>
+				💻 Majoring in Computer Science <br>
+				🏖️ Brazil <br>
+				📨 cainacc@hotmail.com <br>
+			</p>
 		</div>
-		<div class="company-info">
-		  <h1>Company Name</h1>
-		  <p>Slogan or Tagline</p>
-		</div>
-	</header>
-	<!-- HEADER END -->
+	</div>
 
 	<div id="content">
 
@@ -228,35 +287,6 @@
 			</div>
 		</div>
 	-->
-
-	<div class = "row">
-		<!-- <div id="white-line"></div> -->
-		<!--<div class = "col-lg-4">
-			<img id="caina-pic" src="img/caina.png">
-		</div>-->
-		<div class = "col-lg-12">
-			<h1 id="ending-message" >Follow us 4 more good smelling GAMES!!</h1>
-			<div id="whitel"></div>
-			<br>
-			<a id="social-media" href="https://tailsgamedev.itch.io/">
-				<img id="social-media" src="img/itchio.png"/>
-			</a>
-			<a id="social-media" href="https://www.instagram.com/tailsgamedev/">
-				<img id="social-media" src="img/instagram.png"/>
-			</a>
-			<a id="social-media" href="https://www.linkedin.com/in/tailsgamedev/">
-				<img id="social-media" src="https://img.icons8.com/fluency/48/000000/linkedin.png"/>
-			</a>
-			<!--
-				<h2 id="tails-game-dev">TailsGameDev</h2>
-				<p>
-					🎮 Game Programmer <br>
-					💻 Majoring in Computer Science <br>
-					🏖️ Brazil <br>
-				</p>
-			-->
-		</div>
-	</div>
 </div>
 </body>
 </html>
