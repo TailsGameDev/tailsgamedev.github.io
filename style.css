@@ -5,7 +5,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #fff; /* Adjust as needed */
+	background-color: #202020; /* Adjust as needed */
 	padding: 10px 20px;
 	display: flex;
 	align-items: center;
@@ -25,24 +25,25 @@
   }
 /* HEADER END*/
 
+
 body {
 	background-image: url("img/black-square.png");
 	background-position: right top;
 }
 
 * {
-	color: #DE4902;
+	color: white;
 	margin: 0;
 }
 
 #page {
-	margin: 0 8% 2% 8%;
+	margin: 0 4% 2% 4%;
 	background-color: #202020;
 	padding-bottom: 2%;
 }
 
 #caina-pic {
-	background-color: #202020;
+	background-color: gray;
 	border: solid 5px #DE8702;
 	width: 300px;
 	height: 300px;
@@ -63,9 +64,9 @@ body {
 }
 
 #social-media {
-	display: inline;
-	height: 30px;
-	width: 30px;
+	/* display: inline; */
+	height: 60px;
+	width: 60px;
 }
 
 #tails-game-dev {
@@ -78,7 +79,7 @@ body {
 }
 
 #whitel {
-	border-top: 5px solid #DE8702;
+	border-top: 5px solid purple;
 	width: 115%;
 	margin-left: -30px;
 }
@@ -94,8 +95,8 @@ body {
 }
 
 #frame-video {
-	border: 5px solid #DE8702;
-	background-color: #DE8702;
+	border: 5px solid purple;
+	background-color: purple;
 	height: 350px;
 	width: 100%;
 }
@@ -108,4 +109,13 @@ body {
 	float: left;
 	width: 50%;
 	height: 315px;
+}
+
+#in-progress-game {
+	width: 80%;
+	border: 5px solid purple;
+	background-color: purple;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
