@@ -1,5 +1,4 @@
 /* HEADER */
-/* Apply styles for the fixed header */
 .fixed-header {
 	position: fixed;
 	top: 0;
@@ -14,14 +13,17 @@
 	z-index: 1000; /* Ensure the header stays above other content */
   }
   
-  /* Styles for the logo */
-  .logo img {
-	max-width: 100px; /* Adjust the width of the logo as needed */
-  }
+  	.logo img {
+		max-width: 100px;
+	}
+
+	.logo {
+		margin-left: 15%;
+	}
   
-  /* Styles for company name and slogan */
   .company-info {
-	text-align: right; /* Adjust alignment as needed */
+	text-align: right;
+	margin-right: 15%;
   }
 /* HEADER END*/
 
@@ -42,41 +44,22 @@ body {
 	padding-bottom: 2%;
 }
 
-#caina-pic {
-	background-color: gray;
-	border: solid 5px #DE8702;
-	width: 300px;
-	height: 300px;
-	text-align: right;
-	float: right;
-}
-
 #ending-message {
 	text-align: center;
 	margin-top: 15px;
 }
 
-#white-line {
-	border-top: 5px solid #DE8702;
-	width: 100%;
-	margin-top: 65px;
-	position: absolute;
-}
-
-#tails-game-dev {
-	display: inline;
-}
-
 .post-title {
 	font-size: 8m;
-	margin-left: 30px;
 }
 
+/*
 #whitel {
 	border-top: 5px solid purple;
 	width: 115%;
 	margin-left: -30px;
 }
+*/
 
 #steam-frame {
 	width: 100%;
