@@ -1,32 +1,29 @@
 /* HEADER */
 .fixed-header {
-	position: fixed;
-	top: 0;
-	left: 0;
+	/* position: fixed; */
 	width: 100%;
-	background-color: #202020; /* Adjust as needed */
+	background-color: #202020;
 	padding: 10px 20px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect */
-	z-index: 1000; /* Ensure the header stays above other content */
-  }
-  
-  	.logo img {
-		max-width: 100px;
-	}
+	box-shadow: 0 2px 5px rgba(.2, .2, .2, 0.5); /* Shadow effect */
+	z-index: 1000;
+}
 
-	.logo {
-		margin-left: 15%;
-	}
-  
-  .company-info {
+.logo img {
+	max-width: 100px;
+}
+
+.logo {
+	margin-left: 15%;
+}
+
+.company-info {
 	text-align: right;
 	margin-right: 15%;
-  }
+}
 /* HEADER END*/
-
 
 body {
 	background-image: url("img/black-square.png");
@@ -51,6 +48,7 @@ body {
 
 .post-title {
 	font-size: 8m;
+	display: flex;
 }
 
 /*
@@ -72,9 +70,19 @@ body {
 }
 
 #frame-video {
-	border: 5px solid purple;
-	background-color: purple;
+	border: 5px solid #6A329F
+;
+	background-color: #6A329F;
 	height: 350px;
+	width: 100%;
+}
+#mobile-frame-video {
+	/**
+	border: 5px solid #6A329F;
+	background-color: #6A329F;
+	*/
+	height: 640px;
+	max-width: 360px;
 	width: 100%;
 }
 
@@ -90,8 +98,8 @@ body {
 
 #in-progress-game {
 	width: 80%;
-	border: 5px solid purple;
-	background-color: purple;
+	border: 5px solid #6A329F;
+	background-color: #6A329F;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -104,8 +112,8 @@ body {
 	align-items: center;
 }
 #social-media {
-	height: 60px;
-	width: 60px;
+	height: 45px;
+	width: 45px;
 	margin-right: 25px;
 	margin-left: 25px;
 }
