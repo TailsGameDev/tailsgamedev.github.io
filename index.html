@@ -67,9 +67,10 @@
         document.body.style.textAlign = "left";
       }
 
-      function setLoadingProgress(progress) {
-        document.getElementById("progress-bar").style.width = progress + "%";
-      }
+	function setLoadingProgress(progress) {
+		let percent = Math.round(progress * 100); // Ensure proper scaling (0 to 100)
+		document.getElementById("progress-bar").style.width = percent + "%";
+	}
 
       // Initialize Unity and update loading progress
       createUnityInstance(document.querySelector("#unity-canvas"), {
