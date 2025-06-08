@@ -6,7 +6,6 @@
     <link rel="icon" href="tgd-logo.png">
     <title>TailsGameDev Portfolio</title>
     <style>
-		/* Loading screen styles */
 		#loading-screen {
 			position: fixed;
 			width: 100%;
@@ -29,21 +28,25 @@
 			transform: translate(-50%, -50%);
 			margin-top: 155px;
 			width: 80%;
-			height: 50px;
+			height: 20px;
 			background: lightgray;
 			box-shadow: 0px 0px 15px 5px black;
+			border-radius: 10px;
+			overflow: hidden;
 		}
 
 		#custom-loader .fill {
 			width: 0%;
 			height: 100%;
-			background: red;
+			background: #6F3DBA;
+			border-radius: 10px 0 0 10px;
+			transition: width 0.3s ease;
 		}
 
 		#custom-loader .label {
 			position: relative;
-			top: -44px;
-			font-size: 35px;
+			top: -32px;
+			font-size: 20px;
 			text-align: center;
 			font-family: sans-serif, calibri;
 		}
@@ -110,7 +113,7 @@
 		function unitySetLoaderProgressTo(value)
 		{
 			const fill = customLoadingBar.getElementsByClassName("fill")[0];
-			const fillText = customLoadingBar.getElementsByClassName("label")[0];
+			// const fillText = customLoadingBar.getElementsByClassName("label")[0];
 
 			fill.animate(
 			[
@@ -122,7 +125,7 @@
 			}
 			);
 
-			fillText.textContent = (value * 100).toFixed() + "%";
+			// fillText.textContent = (value * 100).toFixed() + "%";
 		}
     </script>
 </body>
