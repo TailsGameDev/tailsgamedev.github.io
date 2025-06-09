@@ -126,6 +126,17 @@
 
 			// fillText.textContent = (value * 100).toFixed() + "%";
 		}
+
+    window.addEventListener("wheel", function (e) {
+      if (e.ctrlKey) return; // Avoid pinch zoom events
+
+      let unityInstance = window.unityInstance || null;
+      if (unityInstance && typeof unityInstance.SendMessage === "function") {
+        let deltaY = e.deltaY;
+        // Forward the scroll to a Unity GameObject
+        unityInstance.SendMessage("Scroll Handler", "OnScroll", deltaY);
+      }
+    }, { passive: false });   
     </script>
 </body>
 </html>
